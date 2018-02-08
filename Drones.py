@@ -36,7 +36,26 @@ arm_and_takeoff(20)
 
 drone.airspeed = 10 
 
-a_location = LocationGlobalRelative(-35.362144, 149.164409, 20)
+a_location = LocationGlobalRelative(20.736212, -103.456114,20) 
+drone.simple_goto(a_location) 
+
+time.sleep(12)
+
+a_location = LocationGlobalRelative(20.736237, -103.456639,20)
 drone.simple_goto(a_location)
 
-time.sleep(50)
+time.sleep(20)
+
+a_location = LocationGlobalRelative(20.735529, -103.456709,20)
+drone.simple_goto(a_location)
+
+time.sleep(15)
+
+a_location = LocationGlobalRelative(20.735507, -103.456191,20)
+drone.simple_goto(a_location)
+
+time.sleep(20)
+
+drone.mode = VehicleMode ("RTL")
+
+print " Battery Voltage: %s v" % drone.battery.voltage
