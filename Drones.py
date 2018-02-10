@@ -15,6 +15,7 @@ def arm_and_takeoff(TargetAltitude):
 
 	while not drone.armed:
 		print ("Waiting for arming...")
+	
 		time.sleep(1)
 
 	print("Ready for takeoff, taking off...")
@@ -35,7 +36,7 @@ drone = connect('127.0.0.1:14551', wait_ready=True)
 arm_and_takeoff(20)
 
 drone.airspeed = 10 
-
+ 
 a_location = LocationGlobalRelative(20.736212, -103.456114,20) 
 drone.simple_goto(a_location) 
 
